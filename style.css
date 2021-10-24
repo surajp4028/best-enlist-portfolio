@@ -95,7 +95,7 @@ section .title::after{
     color: rgb(240, 8, 58);
 }
 nav {
-    background: #222;
+    background: rgb(0, 0, 0);
     padding: 5px 50px;
     font-family: sans-serif;
   }
@@ -247,33 +247,39 @@ nav {
   }
   
 .home{
-    display: flex;
-    background: url("bg.png") no-repeat center;
-    height: 100vh;
+    z-index: 0;
+    
+    background: url("back.jpg") no-repeat center;
     color: #fff;
-    min-height: 500px;
+    padding: 170px 10px;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
+   
 }
 .home .max-width{
   width: 100%;
-  display: flex;
+  text-align: center;
+  align-items: center;
+  
 }
-.home .max-width .row{
-  margin-right: 0;
-}
+
 .home .home-content .text-1{
     font-size: 27px;
+    text-align: center;
+    
 }
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+    text-align: center;
 }
+
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
+    text-align: center;
 }
 .home .home-content .text-3 span{
     color: crimson;
@@ -290,11 +296,19 @@ nav {
     border-radius: 6px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
+    text-align: center;
 }
-.home .home-content a:hover{
-    color: crimson;
+.home .home-content .hire{
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
     background: none;
 }
+.home .home-content a:hover{
+    color: rgb(255, 255, 255);
+    background: crimson;
+    border: 2px solid crimson;
+}
+
 
 /* about section styling */
 .about .title::after{
@@ -392,7 +406,8 @@ nav {
     content: "what i know";
 }
 .skills .skills-content .column{
-    width: calc(50% - 30px);
+    /* width: calc(50% - 30px); */
+    width: 50%;
 }
 .skills .skills-content .left .text{
     font-size: 20px;
@@ -418,7 +433,7 @@ nav {
     color: crimson;
     background: none;
 }
-.skills .skills-content .right .bars{
+/* .skills .skills-content .right .bars{
     margin-bottom: 15px;
 }
 .skills .skills-content .right .info{
@@ -459,12 +474,15 @@ nav {
 }
 .skills-content .right .mysql::before{
     width: 70%;
-}
-.skills-content .right .mn img{
-    width: 100px;
-    
-}
+} */
+.right{
+    width: 50%;
+    box-sizing: border-box;
 
+}
+.right img{
+    width: 500px;
+}
 /* teams section styling */
 .teams .title::after{
     content: "who with me";
